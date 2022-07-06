@@ -22,7 +22,7 @@ public class MSSQLConverter implements CustomConverter<SchemaBuilder, Relational
 
   private final Set<String> DATE_TYPES = Set.of("DATE", "DATETIME", "DATETIME2", "DATETIMEOFFSET", "SMALLDATETIME");
   private final String TIME_TYPE = "TIME";
-  private final String SMALLMONEY_TYPE = "SMALLMONEY";
+  private final String SMALLMONEY_TYPE = Set.of("SMALLMONEY", "MONEY", "DECIMAL", "NUMERIC");
 
   @Override
   public void configure(Properties props) {}
